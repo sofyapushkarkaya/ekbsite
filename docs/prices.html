@@ -56,25 +56,25 @@
                 <tr>
                   <td>Эконом</td>
                   <td>от 15 человек</td>
-                  <td>1500 руб.</td>
+                  <td>1500 руб./чел.</td>
                   <td>Пешая прогулка,<br>Экскурсия по городу</td>
                 </tr>
                 <tr>
                   <td>Комфорт</td>
                   <td>от 7 человек</td>
-                  <td>2500 руб.</td>
+                  <td>2500 руб./чел.</td>
                   <td>Пешая прогулка,<br>Экскурсия по паркам,<br>Посещение музеев</td>
                 </tr>
                 <tr>
                   <td>Премиум</td>
                   <td>от 4 до 6 человек</td>
-                  <td>4200 руб.</td>
+                  <td>4200 руб./чел.</td>
                   <td>Пешая прогулка, Экскурсия по паркам,<br>Посещение музеев, Экскурсия на Ганину Яму</td>
                 </tr>
                 <tr>
                   <td>Люкс</td>
                   <td>1-2 человека</td>
-                  <td>6000 руб.</td>
+                  <td>6000 руб./чел.</td>
                   <td>Эксклюзивные маршруты под ключ,<br>Пешая прогулка,<br>Экскурсия по паркам,<br>Посещение музеев,<br>Экскурсия на Ганину Яму</td>
                 </tr>
               </tbody>
@@ -99,41 +99,52 @@
                     <ul class="service-list">
                       <li>
                         <input type="checkbox" name="services" value="transfer" data-price="1500">
-                        <label>Трансфер до места назначения экскурсии</label>
+                        <label>Трансфер до места назначения экскурсии (до 4 чел.) — 1500 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="disable_transfer" data-price="1500">
-                        <label>Трансфер для людей из маломобильных групп населения</label>
+                        <input type="checkbox" name="services" value="disable_transfer" data-price="2500">
+                        <label>Трансфер для людей из маломобильных групп населения (спецтранспорт) — 2500 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="breakfast" data-price="800">
-                        <label>Завтрак</label>
+                        <input type="checkbox" name="services" value="breakfast" data-price="500">
+                        <label>Завтрак в кафе города — 500 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="lunch" data-price="1000">
-                        <label>Обед</label>
+                        <input type="checkbox" name="services" value="lunch" data-price="700">
+                        <label>Обед в ресторане уральской кухни — 700 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="dinner" data-price="1200">
-                        <label>Ужин</label>
+                        <input type="checkbox" name="services" value="dinner" data-price="900">
+                        <label>Ужин с видом на город — 900 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="translator" data-price="2000">
-                        <label>Переводчик с русского на английский язык</label>
+                        <input type="checkbox" name="services" value="translator" data-price="3000">
+                        <label>Переводчик с русского на английский язык (на всю экскурсию) — 3000 ₽</label>
                       </li>
                       <li>
                         <input type="checkbox" name="services" value="child_guide" data-price="2000">
-                        <label>Экскурсовод для детей</label>
+                        <label>Экскурсовод для детей (интерактивный формат) — 2000 ₽</label>
                       </li>
                       <li>
-                        <input type="checkbox" name="services" value="sign_language" data-price="1500">
-                        <label>Сурдопереводчик</label>
+                        <input type="checkbox" name="services" value="sign_language" data-price="3500">
+                        <label>Сурдопереводчик — 3500 ₽</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="photo" data-price="1500">
+                        <label>Профессиональная фотосъёмка (20+ обработанных фото) — 1500 ₽</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="audio" data-price="300">
+                        <label>Аудиогид на 4 языках — 300 ₽</label>
                       </li>
                     </ul>
                   </form>
                 </div>
                 <div class="services-right">
-                  <div class="services-price" id="total-price">Сумма: 0 рублей</div>
+                  <div class="services-price" id="total-price">Сумма: 0 ₽</div>
+                  <div class="services-note" style="font-size: 12px; color: #666; margin-top: 10px;">
+                    *Цены указаны за человека, кроме трансфера
+                  </div>
                 </div>
               </div>
             </div>
@@ -174,7 +185,7 @@
 
   <footer class="page-footer">
     <div class="container">
-      <p class="copyright">2023 год, Авторская экскурсия по Екатеринбургу</p>
+      <p class="copyright">2025 год, Авторская экскурсия по Екатеринбургу</p>
     </div>
   </footer>
 
@@ -191,7 +202,7 @@
               totalPrice += parseInt(checkbox.getAttribute('data-price'));
             }
           });
-          totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+          totalPriceElement.textContent = `Сумма: ${totalPrice} ₽`;
         });
       });
     }
