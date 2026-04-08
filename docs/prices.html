@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Цены и тарифы</title>
+  <link rel="stylesheet" href="./excursion.css">
+</head>
+
+<body class="page-body">
+  <header class="page-header">
+    <div class="container">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="index.html">Главная</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="route.html">Маршрут</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="prices.html">Цены</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="excursions.html">Другие экскурсии</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-content">
+      <div class="container">
+        <div class="page-main-column">
+          <section class="page-section prices" id="prices">
+            <h2 class="price-title">Какие есть тарифы?</h2>
+            <div class="prices-text-wrapper">  
+              <p>Мы знаем, что каждое путешествие уникально. 
+              Поэтому разработали несколько тарифов, чтобы вы могли выбрать самый комфортный для себя. 
+              Независимо от выбранного тарифа, вас ждет незабываемое путешествие.</p>
+            </div>
+            <table class="prices-table">
+              <thead>
+                <tr>
+                  <th>Тариф</th>
+                  <th>Группа</th>
+                  <th>Стоимость</th>
+                  <th>Программа</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Эконом</td>
+                  <td>от 15 человек</td>
+                  <td>1500 руб.</td>
+                  <td>Пешая прогулка,<br>Прогулка по крышам</td>
+                </tr>
+                <tr>
+                  <td>Комфорт</td>
+                  <td>от 7 человек</td>
+                  <td>2500 руб.</td>
+                  <td>Пешая прогулка,<br>Экскурсия по рекам и каналам,<br>Прогулка по крышам</td>
+                </tr>
+                <tr>
+                  <td>Премиум</td>
+                  <td>от 4 до 6 человек</td>
+                  <td>4200 руб.</td>
+                  <td>Пешая прогулка, Экскурсия по рекам и каналам,<br>Прогулка по крышам, Экскурсия в Петергоф</td>
+                </tr>
+                <tr>
+                  <td>Люкс</td>
+                  <td>1-2 человека</td>
+                  <td>6000 руб.</td>
+                  <td>Эксклюзивные маршруты под ключ,<br>Пешая прогулка,<br>Экскурсия по рекам и каналам,<br>Прогулка по крышам,<br>Экскурсия в Петергоф</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="prices-caption">
+              <p>Мы предлагаем различные варианты оплаты. Менеджер поможет подобрать оптимальный вариант.</p>
+            </div>
+          </section>
+
+          <section class="page-section page-section-with-bg services">
+            <div class="services-content">
+              <h2 class="service-title">Дополнительные услуги</h2>
+              <div class="services-text">
+                <p>
+                  При выборе дополнительных опций к экскурсиям вы получаете возможность настроить свой опыт путешествия по своему вкусу. 
+                  В зависимости от ваших предпочтений и потребностей, вы можете выбрать опцию трансфера, питания или сопровождения.
+                </p>
+              </div>
+              <div class="services-row">
+                <div class="services-left">
+                  <form class="services-form" method="post" action="/">
+                    <ul class="service-list">
+                      <li>
+                        <input type="checkbox" name="services" value="transfer" data-price="100">
+                        <label>Трансфер до места назначения экскурсии</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="disable_transfer" data-price="200">
+                        <label>Трансфер для людей из маломобильных групп населения</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="breakfast" data-price="100">
+                        <label>Завтрак</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="lunch" data-price="100">
+                        <label>Обед</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="dinner" data-price="100">
+                        <label>Ужин</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="translator" data-price="100">
+                        <label>Переводчик с русского на английский язык</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="child_guide" data-price="100">
+                        <label>Экскурсовод для детей</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="services" value="sign_language" data-price="100">
+                        <label>Сурдопереводчик</label>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="services-right">
+                  <div class="services-price" id="total-price">Сумма: 0 рублей</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside class="sidebar">
+          <h2 class="sidebar-title">Другие экскурсии</h2>
+          <ul class="sidebar-list">
+            <li>
+              <article class="sidebar-card">
+                <a class="card-image-link" href="excursions.html#river">
+                  <img class="sidebar-img" src="images/card-6.jpg" alt="Вид на достопримечательности Санкт-Петербурга">
+                </a>
+                <h3 class="card-image-title"><a href="excursions.html#river">Экскурсия по рекам и каналам</a></h3>
+              </article>
+            </li>
+            <li>
+              <article class="sidebar-card">
+                <a class="card-image-link" href="excursions.html#mystic">
+                  <img class="sidebar-img" src="images/card-1.jpg" alt="Реки и каналы Санкт-Петербурга">
+                </a>
+                <h3 class="card-image-title"><a href="excursions.html#mystic">Мистический Петербург</a></h3>
+              </article>
+            </li>
+            <li>
+              <article class="sidebar-card">
+                <a class="card-image-link" href="excursions.html#walk">
+                  <img class="sidebar-img" src="images/card-4.jpg" alt="Люди гуляют рядом с достопримечательностями Санкт-Петербурга">
+                </a>
+                <h3 class="card-image-title"><a href="excursions.html#walk">Пешая прогулка по городу</a></h3>
+              </article>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p class="copyright">2023 год, Авторская экскурсия по Санкт-Петербургу</p>
+    </div>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[name="services"]');
+    const totalPriceElement = document.getElementById('total-price');
+ 
+    if(checkboxes.length && totalPriceElement) {
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          let totalPrice = 0;
+          checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+              totalPrice += parseInt(checkbox.getAttribute('data-price'));
+            }
+          });
+          totalPriceElement.textContent = `Сумма: ${totalPrice} рублей`;
+        });
+      });
+    }
+  </script>
+</body>
+</html>
