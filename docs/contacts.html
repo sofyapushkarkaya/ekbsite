@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты и запись на экскурсию</title>
+  <link rel="stylesheet" href="./excursion.css">
+</head>
+
+<body class="page-body">
+  <header class="page-header">
+    <div class="container">
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="index.html">Главная</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="route.html">Маршрут</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="prices.html">Цены</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="excursions.html">Другие экскурсии</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-content">
+      <div class="container">
+        <div class="page-main-column">
+          <section class="page-section contacts" id="contacts">
+            <div class="contacts-content">
+              <h2 class="contacts-title">Как записаться на экскурсию</h2>  
+              <p>Для подробной информации заполните форму.<br>
+                Наши менеджеры с вами свяжутся</p>
+
+              <form class="contacts-form" method="post" action="/">
+                <input type="text" placeholder="Имя"><br>
+                <input type="text" placeholder="Фамилия"><br>
+                <input type="email" placeholder="email"><br>
+                <input type="tel" placeholder="Номер телефона"><br>
+                <button type="submit">Отправить</button>
+              
+                <div class="contacts-form-bottom">
+                  <label class="contacts-tariff-label" for="tariff">Выберите тариф</label>
+                  <select class="contacts-select" name="tariff" id="tariff">
+                    <option value="economy">Эконом</option>
+                    <option value="comfort">Комфорт</option>
+                    <option value="premium">Премиум</option>
+                    <option value="luxure">Люкс</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <address class="contacts-address" style="margin-top: 2rem;">
+              <a class="contacts-btn" href="https://web.telegram.org/a/#1305662470">Свяжитесь с автором экскурсии</a>
+              <p style="margin-top: 1rem;">Или напишите нам на email: info@spb-excursion.ru</p>
+              <p>Телефон: +7 (812) 123-45-67</p>
+            </address>
+          </section>
+        </div>
+        <aside class="sidebar">
+          <h2 class="sidebar-title">Другие экскурсии</h2>
+          <ul class="sidebar-list">
+            <li>
+              <article class="sidebar-card">
+                <a class="card-image-link" href="excursions.html#river">
+                  <img class="sidebar-img" src="images/card-6.jpg" alt="Вид на достопримечательности Санкт-Петербурга">
+                </a>
+                <h3 class="card-image-title"><a href="excursions.html#river">Экскурсия по рекам и каналам</a></h3>
+              </article>
+            </li>
+            <li>
+              <article class="sidebar-card">
+                <a class="card-image-link" href="excursions.html#mystic">
+                  <img class="sidebar-img" src="images/card-1.jpg" alt="Реки и каналы Санкт-Петербурга">
+                </a>
+                <h3 class="card-image-title"><a href="excursions.html#mystic
