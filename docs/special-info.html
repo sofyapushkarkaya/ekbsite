@@ -1,80 +1,254 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Важная информация — Экскурсия по Екатеринбургу</title>
+    <title>Особая информация — Важные сведения об экскурсии</title>
+    <link rel="stylesheet" href="./excursion.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.5;
-            margin: 0;
-            padding: 40px 20px;
-            background-color: #f5f5f5;
+        /* Дополнительные стили для страницы особой информации */
+        .info-page-wrapper {
+            background-image: linear-gradient(90deg, #fff 50%, #242424 50%);
         }
-        .info-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background-color: #fff8e7;
+        .info-page-wrapper .container {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            padding: 0 50px;
+        }
+        .info-main-column {
+            background-color: #fff;
+            padding: 60px 80px 60px 0;
+        }
+        .important-info-card {
+            background: linear-gradient(135deg, #fff8e7 0%, #fffef5 100%);
             border-left: 8px solid #e67e22;
-            border-radius: 16px;
-            padding: 30px 35px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            padding: 40px 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
-        h1 {
+        .important-info-card h1 {
+            margin: 0 0 30px 0;
+            font-size: 42px;
+            font-weight: 700;
             color: #c0392b;
-            font-size: 28px;
-            margin: 0 0 20px 0;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
         }
-        h1::before {
+        .important-info-card h1::before {
             content: "❗";
-            font-size: 32px;
+            font-size: 48px;
         }
-        p {
-            margin: 12px 0;
-            font-size: 18px;
+        .info-item {
+            margin-bottom: 25px;
+            padding: 5px 0;
+            border-bottom: 1px dashed #e0d5b5;
         }
-        .highlight {
-            background-color: #fce4d6;
-            padding: 10px 15px;
-            border-radius: 12px;
-            font-weight: bold;
-        }
-        .discount {
-            color: #2c6e2c;
+        .info-item strong {
+            display: inline-block;
+            min-width: 220px;
+            font-size: 20px;
             font-weight: 700;
-            font-size: 18px;
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 2px dashed #e67e22;
+            color: #2c3e50;
         }
-        hr {
+        .info-item span {
+            font-size: 20px;
+            color: #333;
+        }
+        .payment-warning {
+            background-color: #fce4d6;
+            padding: 18px 22px;
+            border-radius: 16px;
+            margin: 25px 0;
+            font-weight: 600;
+            color: #a8431d;
+            font-size: 18px;
+            border-left: 4px solid #e67e22;
+        }
+        .age-notice {
             margin: 20px 0;
-            border: none;
-            border-top: 1px solid #e0d5b5;
+            padding: 12px 0;
+            font-size: 18px;
+            color: #555;
+        }
+        .discount-block {
+            margin-top: 30px;
+            padding: 22px 25px;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #a5d6a7;
+        }
+        .discount-block p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 700;
+            color: #2e7d32;
+        }
+        .discount-block small {
+            display: block;
+            margin-top: 8px;
+            font-size: 14px;
+            color: #558b2f;
+            font-weight: normal;
+        }
+        .info-note {
+            margin-top: 30px;
+            padding: 15px 20px;
+            background-color: #f0f4f8;
+            border-radius: 16px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        @media (max-width: 1000px) {
+            .info-main-column {
+                padding: 40px 30px 40px 0;
+            }
+            .info-item strong {
+                min-width: 180px;
+                font-size: 18px;
+            }
+            .info-item span {
+                font-size: 18px;
+            }
+            .important-info-card {
+                padding: 25px 30px;
+            }
+        }
+        @media (max-width: 800px) {
+            .info-page-wrapper .container {
+                grid-template-columns: 1fr;
+            }
+            .info-main-column {
+                padding: 40px 0;
+            }
+            .info-item strong {
+                display: block;
+                margin-bottom: 8px;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="info-container">
-        <h1>Важная информация!</h1>
-
-        <p><strong>📍 Место встречи:</strong> г. Екатеринбург, около входа в метро на станции "Площадь 1905 года"</p>
-        <p><strong>🕒 Время:</strong> 11:00</p>
-        <p><strong>💰 Способ оплаты:</strong> только наличными или переводом по номеру телефона <strong>8 951 217-88-02</strong></p>
-
-        <div class="highlight">
-            ⚠️ Банковские карты и иные виды оплаты не принимаются. Просьба подготовить средства заранее.
+<body class="page-body">
+    <header class="page-header">
+        <div class="container">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="route.html">Маршрут</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="prices.html">Цены</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="special-info.html" style="font-weight: 700; border-bottom: 2px solid #000;">Особая информация</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <p><strong>📌 Просьба обращать внимание на возрастные ограничения экскурсий.</strong></p>
+    <main>
+        <!-- Интро секция в стиле главной страницы -->
+        <section class="intro" style="min-height: auto; padding: 80px 0;">
+            <div class="container">
+                <div class="intro-content">
+                    <h1 class="intro-title">Особая информация</h1>
+                    <div class="intro-text-wrapper">
+                        <p>Внимательно ознакомьтесь с важными сведениями перед посещением экскурсии</p>
+                        <p>Это поможет сделать ваше путешествие комфортным и организованным</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="discount">
-            🎉 При покупке экскурсии для компании/класса/группы более 20 человек, возможна скидка 20% от стоимости экскурсии (без учета дополнительных опций).
+        <div class="info-page-wrapper">
+            <div class="container">
+                <div class="info-main-column">
+                    <!-- Основной блок с важной информацией -->
+                    <div class="important-info-card">
+                        <h1>Важная информация!</h1>
+
+                        <div class="info-item">
+                            <strong>📍 Место встречи:</strong>
+                            <span>г. Екатеринбург, около входа в метро на станции "Площадь 1905 года"</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>🕒 Время:</strong>
+                            <span>11:00</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>💰 Способ оплаты:</strong>
+                            <span>только наличными или переводом по номеру телефона <strong>8 951 217-88-02</strong></span>
+                        </div>
+
+                        <div class="payment-warning">
+                            ⚠️ Банковские карты и иные виды оплаты не принимаются. Просьба подготовить средства заранее.
+                        </div>
+
+                        <div class="age-notice">
+                            📌 <strong>Просьба обращать внимание на возрастные ограничения экскурсий.</strong>
+                        </div>
+
+                        <div class="discount-block">
+                            <p>🎉 При покупке экскурсии для компании/класса/группы более 20 человек, возможна скидка 20% от стоимости экскурсии (без учета дополнительных опций).</p>
+                            <small>* Скидка применяется при предварительном согласовании</small>
+                        </div>
+
+                        <div class="info-note">
+                            📞 По всем вопросам обращайтесь по телефону: <strong>8 951 217-88-02</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Сайдбар с отзывами (как на главной) -->
+                <aside class="sidebar">
+                    <h2 class="sidebar-title">Отзывы клиентов</h2>
+                    <ul class="sidebar-list">
+                        <li>
+                            <div class="reviews-item-sidebar">
+                                <div class="reviews-item-sidebar-image">
+                                    <img src="images/reviews-1.jpg" alt="Аня и Сережа" width="60" height="60">
+                                </div>
+                                <div class="reviews-item-sidebar-content">
+                                    <p class="reviews-sidebar-text">Очень организованная экскурсия. Встретили вовремя, комфортабельный трансфер, гид рассказывал по дороге интересные факты об истории царской семьи.</p>
+                                    <p class="reviews-sidebar-text">На Ганиной Яме дали достаточно времени, чтобы спокойно все осмотреть, поставить свечи, прогуляться по территории. На границе частей света сделали отличные фото на память.</p> 
+                                    <p class="reviews-sidebar-text">Всё четко, без спешки. Спасибо!</p>
+                                    <p class="reviews-sidebar-author">Аня и Сережа, Пермь</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="reviews-item-sidebar">
+                                <div class="reviews-item-sidebar-image">
+                                    <img src="images/reviews-2.jpg" alt="Света, Алена, Саша и Ваня" width="60" height="60">
+                                </div>
+                                <div class="reviews-item-sidebar-content">
+                                    <p class="reviews-sidebar-text">Шикарная экскурсия! Гид знает город досконально, отвечал на все вопросы, маршрут продуман до мелочей.</p>
+                                    <p class="reviews-sidebar-text">Увидели и парадный Екатеринбург, и потаенные дворики. Отдельный плюс — трансфер комфортный, с кондиционером. Спасибо организаторам!</p>
+                                    <p class="reviews-sidebar-author">Света, Алена, Саша и Ваня, Краснодар</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p class="copyright">2025 год, Авторская экскурсия по Екатеринбургу</p>
+        </div>
+    </footer>
 </body>
 </html>
