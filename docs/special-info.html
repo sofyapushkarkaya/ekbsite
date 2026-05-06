@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Важная информация — Экскурсия по Екатеринбургу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+        }
+        .info-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff8e7;
+            border-left: 8px solid #e67e22;
+            border-radius: 16px;
+            padding: 30px 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #c0392b;
+            font-size: 28px;
+            margin: 0 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        h1::before {
+            content: "❗";
+            font-size: 32px;
+        }
+        p {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+        .highlight {
+            background-color: #fce4d6;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+        .discount {
+            color: #2c6e2c;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px dashed #e67e22;
+        }
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #e0d5b5;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-container">
+        <h1>Важная информация!</h1>
+
+        <p><strong>📍 Место встречи:</strong> г. Екатеринбург, около входа в метро на станции "Площадь 1905 года"</p>
+        <p><strong>🕒 Время:</strong> 11:00</p>
+        <p><strong>💰 Способ оплаты:</strong> только наличными или переводом по номеру телефона <strong>8 951 217-88-02</strong></p>
+
+        <div class="highlight">
+            ⚠️ Банковские карты и иные виды оплаты не принимаются. Просьба подготовить средства заранее.
+        </div>
+
+        <p><strong>📌 Просьба обращать внимание на возрастные ограничения экскурсий.</strong></p>
+
+        <div class="discount">
+            🎉 При покупке экскурсии для компании/класса/группы более 20 человек, возможна скидка 20% от стоимости экскурсии (без учета дополнительных опций).
+        </div>
+    </div>
+</body>
+</html>
