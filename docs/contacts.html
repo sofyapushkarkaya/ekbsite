@@ -83,4 +83,91 @@
                 <a class="card-image-link" href="excursions.html#mystic">
                   <img class="sidebar-img" src="images/card-1.jpg" alt="Реки и каналы Санкт-Петербурга">
                 </a>
-                <h3 class="card-image-title"><a href="excursions.html#mystic
+                <h3 class="card-image-title"><a href="excursions.html#mystic">Мистические экскурсии</a></h3>
+              </article>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p class="copyright">© 2024 Экскурсии по Санкт-Петербургу</p>
+    </div>
+  </footer>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="popup-close">&times;</span>
+      <div class="popup-icon">✓</div>
+      <h3 class="popup-title">Заявка отправлена!</h3>
+      <p class="popup-text">Спасибо за обращение! Наши менеджеры свяжутся с вами в ближайшее время.</p>
+      <button class="popup-button" id="popupOkBtn">Хорошо</button>
+    </div>
+  </div>
+
+  <script>
+    const popup = document.getElementById('popup');
+    const closeBtn = document.querySelector('.popup-close');
+    const okBtn = document.getElementById('popupOkBtn');
+    const form = document.querySelector('.contacts-form');
+    
+    function openPopup() {
+      popup.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closePopup() {
+      popup.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    
+    if (form) {
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const nameInput = form.querySelector('input[placeholder="Имя"]');
+        const emailInput = form.querySelector('input[placeholder="email"]');
+        
+        if (!nameInput.value.trim()) {
+          alert('Пожалуйста, введите имя');
+          nameInput.focus();
+          return;
+        }
+        
+        if (!emailInput.value.trim()) {
+          alert('Пожалуйста, введите email');
+          emailInput.focus();
+          return;
+        }
+        
+        openPopup();
+      });
+    }
+    
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closePopup);
+    }
+    
+    if (okBtn) {
+      okBtn.addEventListener('click', closePopup);
+    }
+    
+    if (popup) {
+      popup.addEventListener('click', function(event) {
+        if (event.target === popup) {
+          closePopup();
+        }
+      });
+    }
+    
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && popup.style.display === 'block') {
+        closePopup();
+      }
+    });
+  </script>
+</body>
+</html>
